@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: #F8F4EC;
+}
+
+header {
+    width: 100%;
+    border-bottom: 1px solid #9b9b9b15;
+
+    nav {
+        width: 100%;
+        max-width: 1172px;
+        margin: 0 auto;
+        /* padding: 0 16px; */
+    }
+}
+.bnner-mob{
+    display: none;
+}
+section,
+footer {
+    width: 100%;
+    max-width: 1172px;
+    margin: 0 auto;
+    padding: 20px 16px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 16px;
+}
+
+nav figure {
+    /* height: -200px; */
+    margin: -6px 0;
+}
+
+nav figure img {
+    width: 60px;
+    margin: 0 0 -3px 30px;
+
+}
+
+.nav-bar {
+    display: flex;
+    gap: 50px;
+}
+
+.bar-ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: #43334C;
+        font-weight: 600;
+        padding: 8px 12px;
+        display: inline-block;
+        position: relative;
+    }
+
+    a:hover {
+        color: #E83C91;
+    }
+
+    a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: #E83C91;
+        transition: .3s ease;
+    }
+
+    a:hover::after {
+        width: 100%;
+
+    }
+}
+
+.agen-cab {
+    text-decoration: none;
+    color: #F8F4EC;
+    font-weight: 600;
+    padding: 8px 12px;
+    background-color: #E83C91;
+    border-radius: 12px;
+    transition: .3s ease-in-out;
+
+}
+
+.agen-cab:hover {
+    background-color: #ff71a3;
+}
+
+
+.ham-menu {
+    display: none;
+}
+
+/* BANNER */
+
+.banner-principal {
+    position: relative;
+
+    img {
+        width: 100%;
+        border-radius: 16px;
+    }
+}
+
+.content-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1172px;
+    text-align: center;
+    /* padding: 0 100px; */
+
+    h1 {
+        color: #F8F4EC;
+        font-size: 44px;
+        padding: 0 50px;
+        /* font-family: "Cinzel", serif; */
+        /* font-weight: 900; */
+    }
+
+    p {
+        color: #F8F4EC;
+        font-size: 18px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #F8F4EC;
+        font-weight: 600;
+        padding: 12px 16px;
+        background-color: #E83C91;
+        border-radius: 12px;
+        transition: .3s ease-in-out;
+        display: inline-block;
+        margin-top: 30px;
+
+    }
+
+    a:hover {
+        background-color: #ff71a3;
+    }
+}
+
+/* SERVIÇOS */
+h2 {
+    padding: 20px 0;
+}
+
+.card-serv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 30px;
+    justify-content: center;
+}
+
+.card-serv article {
+    width: calc(33% - 20px);
+
+    img {
+        width: 100%;
+        max-height: 230px;
+        object-fit: fill;
+        border-radius: 16px;
+    }
+}
+
+.serv-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px;
+
+    .serv-tp {
+        font-weight: bold;
+        color: #140f16;
+    }
+
+    .serv-info {
+        font-size: 12px;
+        color: #89616f;
+    }
+
+    .serv-price {
+        font-weight: bold;
+        color: #ff71a3;
+    }
+}
+
+/* QUEM SOU EU  */
+.sobre-mim {
+    max-width: 100%;
+    padding: 0;
+    background-color: white;
+    padding: 40px 0;
+
+    article {
+        max-width: 1172px;
+        margin: 0 auto;
+        padding: 0 16px;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    figure {
+        width: 30%;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            text-align: center;
+            aspect-ratio: 1/1;
+            border-radius: 16px;
+            box-shadow: 0 0 10px #ff71a3;
+        }
+    }
+
+    div {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        h3 {
+            font-size: 26px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 16px;
+            color: #89616f;
+        }
+
+        a {
+            text-decoration: none;
+            color: #E83C91;
+            font-weight: 600;
+            padding: 12px 16px;
+            background-color: #ffccde;
+            border-radius: 16px;
+            transition: .3s ease-in-out;
+            width: 200px;
+            text-align: center;
+            /* display: block; */
+            margin-top: 30px;
+
+        }
+
+        a:hover {
+            background-color: #faaac6;
+        }
+    }
+}
+
+/* AVALIAÇOES */
+.avl-p-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        /* width: 20%; */
+        width: calc(33% - 20px);
+        min-width: 275px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 20px;
+
+    }
+}
+
+.profile-av {
+    display: flex;
+    gap: 20px;
+
+    img {
+        width: 48px;
+        border-radius: 50%;
+    }
+
+}
+
+.icon-av {
+    font-size: 10px;
+}
+
+.name-client-av {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.coment-av {
+    font-size: 14px;
+    color: #89616f;
+}
+
+/* LOCALIZAÇAO */
+
+iframe {
+    width: 100%;
+    border-radius: 16px;
+}
+
+/* FOOTER  */
+
+footer {
+    text-align: center;
+    background-color: white;
+    min-width: 100%;
+    padding: 40px;
+
+    h2 {
+        font-size: 20px;
+        font-family: "Cinzel", serif;
+        color: #E83C91;
+        padding: 0;
+    }
+
+    i {
+        color: #898989;
+    }
+
+    p {
+        font-size: 12px;
+        color: #89616f;
+    }
+}
+
+@media screen and (max-width: 897px) {
+    .nav-bar {
+        display: none;
+    }
+
+    .ham-menu {
+        display: inherit;
+        height: 25px;
+    }
+
+    .img-logo {
+        margin-left: 0;
+    }
+    .desk{
+        display: none;
+    }
+    .bnner-mob{
+        display: initial;
+    }
+    .content-banner{
+        h1{
+            color: #8C0F64;
+            font-size: 36px;
+        }
+        p{
+            font-size: 14px;
+        }
+
+    }
+
+    .card-serv article {
+        width: 100%;
+        background-color: white;
+        padding-bottom: 20px;
+        border-radius: 16px;
+        
+       
+
+        img {
+            width: 100%;
+            /* max-width: 800px; */
+            max-height: 380px;
+            object-fit: cover;
+            border-radius: 16px 16px 0 0;
+        }
+    }
+}
