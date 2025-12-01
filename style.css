@@ -14,7 +14,7 @@ body {
 
 header {
     width: 100%;
-    border-bottom: 1px solid #9b9b9b15;
+    border-bottom: 1px solid #9b9b9b54;
 
     nav {
         width: 100%;
@@ -359,7 +359,10 @@ footer {
     .nav-bar {
         display: none;
     }
-
+    h2{
+        padding-top: 0;
+        font-size: 20px;
+    }
     .ham-menu {
         display: inherit;
         height: 25px;
@@ -374,19 +377,36 @@ footer {
     .bnner-mob{
         display: initial;
     }
+    .banner-principal {
+    width: 100%;
+    padding: 0 0 20px;
+    
+    img {
+        width: 100%;
+        max-height: 600px;
+        border-radius: 0;
+       
+    }
+}
     .content-banner{
+        
         h1{
-            color: #8C0F64;
-            font-size: 36px;
+            color: #B30086;
+            font-size: 40px;
+            padding: 0 20px;
+
         }
         p{
+            margin-top: 30px;
             font-size: 14px;
         }
 
     }
 
+    /* SERVIÇOS  */
+
     .card-serv article {
-        width: 100%;
+        width: calc(50% - 20px);
         background-color: white;
         padding-bottom: 20px;
         border-radius: 16px;
@@ -400,5 +420,30 @@ footer {
             object-fit: cover;
             border-radius: 16px 16px 0 0;
         }
+    }
+    /* SOBRE MIM  */
+
+    .sobre-mim article{
+        flex-direction: column;
+        
+        figure{
+            width: 100%;
+            max-width: 200px;
+        }
+        div{
+            /* text-align: center; */
+            align-items: center;
+
+        }
+    }
+     
+    /* AVALIAÇOES */
+
+    .avl-p-card{
+        flex-direction: row;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        scrollbar-width: none;
+        justify-content: start;
     }
 }
