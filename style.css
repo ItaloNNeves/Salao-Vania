@@ -180,16 +180,19 @@ h2 {
     flex-wrap: wrap;
     gap: 20px;
     padding-bottom: 30px;
-    /* justify-content: center; */
+    justify-content: flex-start;
+    width: 100%;
+    /* max-width: 1172px;
+    margin: 0 auto; */
 }
 
 .card-serv article {
-    width: calc(33% - 20px);
+    /* width: calc(33.33% - 40px); */
+    flex: 0 0 calc((100% - 40px) / 3);
 
     img {
         width: 100%;
         max-height: 230px;
-        object-fit: fill;
         border-radius: 16px;
     }
 }
@@ -308,8 +311,10 @@ h2 {
     gap: 20px;
 
     img {
+        aspect-ratio: 1 / 1;
         width: 48px;
         border-radius: 50%;
+        object-fit: cover;
     }
 
 }
@@ -428,9 +433,9 @@ footer {
     /* SERVIÇOS  */
 
     .card-serv article {
-        width: calc(50% - 20px);
+        flex: 0 0 calc((100% - 20px) /2);
         background-color: white;
-        padding-bottom: 20px;
+        /* padding-bottom: 20px; */
         border-radius: 16px;
 
 
