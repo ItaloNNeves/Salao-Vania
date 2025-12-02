@@ -17,7 +17,7 @@
             <figure>
                 <img class="img-logo" src="./imagens/Logo-va4.svg" alt="">
             </figure>
-            <div class="nav-bar">
+            <div class="nav-bar" id="navBar">
                 <ul class="bar-ul">
                     <li class="bar-li"><a href="#">Ínicio</a></li>
                     <li class="bar-li"><a href="#serviços">Serviços</a></li>
@@ -26,7 +26,8 @@
                 </ul>
                 <a href="#agenda" class="agen-cab" id="#"><i class="fa-brands fa-whatsapp"></i>Agende Agora</a>
             </div>
-            <svg class="ham-menu" width="25px" height="64px" viewBox="0 0 24 24" fill="none"
+            <div id="btnMenu" role="button">
+                <svg class="ham-menu" width="25px" height="64px" viewBox="0 0 24 24" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -35,6 +36,7 @@
                         stroke-linejoin="round"></path>
                 </g>
             </svg>
+            </div>
         </nav>
     </header>
     <main>
@@ -44,7 +46,7 @@
             <div class="content-banner">
                 <h1>Realce sua beleza com o toque único de Vânia Aquino.</h1>
                 <p>Descubra o poder de um cabelo bem cuidado e eleve sua autoestima.</p>
-                <a href="#" id="agenda">Agendar Atendimento</a>
+                <a target="_blank" href="https://wa.me/5575981316315?text=Olá,%20quais%20os%20horarios%20livres%20para%20[DIA]?%20Meu%20interesse%20e%20em%20[SERVICO]." id="agenda">Agendar Atendimento</a>
             </div>
         </section>
         <section class="nossos-srev" id="serviços">
@@ -82,6 +84,22 @@
                         <p class="serv-price">R$ 250,00</p>
                     </div>
                 </article>
+                <article>
+                    <img src="./imagens/pin-cbl.webp" alt="">
+                    <div class="serv-desc">
+                        <p class="serv-tp">Coloração</p>
+                        <p class="serv-info">Cores vibrantes e personalizadas</p>
+                        <p class="serv-price">R$ 250,00</p>
+                    </div>
+                </article>
+                <article>
+                    <img src="./imagens/pin-cbl.webp" alt="">
+                    <div class="serv-desc">
+                        <p class="serv-tp">Coloração</p>
+                        <p class="serv-info">Cores vibrantes e personalizadas</p>
+                        <p class="serv-price">R$ 250,00</p>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -98,7 +116,7 @@
                         salão sentindo-se renovada, confiante e absolutamente deslumbrante. Venha viver essa
                         experiência.
                     </p>
-                    <a href="#">Siga no Instagram</a>
+                    <a href="https://www.instagram.com/cabelosvania/">Siga no Instagram</a>
                 </div>
             </article>
         </section>
@@ -179,9 +197,10 @@
     </main>
     <footer>
         <h2> Vânia Aquino </h2>
-        <i class="fa-brands fa-instagram"></i>
+        <a href="https://www.instagram.com/cabelosvania/" class="icon-insta"><i class="fa-brands fa-instagram"></i></a>
         <p>&copy; Cabelos Vânia. Todos os direitos reservados.</p>
     </footer>
+    <script src="main.js"></script>
 </body>
 
 </html>
