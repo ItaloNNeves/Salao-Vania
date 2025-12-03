@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navBar.classList.remove("active");
       console.log("menu fechado por clique fora");
     }
-  });
+  });S
 
   // opcional: tecla ESC fecha o menu
   document.addEventListener("keydown", (e) => {
@@ -42,3 +42,32 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// PARTE DO AGENDAMENTO
+document.getElementById("btnConfirmar").onclick = () => {
+
+    const checkboxes = document.querySelectorAll(".servicos input:checked");
+    const servicosSelecionados = [...checkboxes].map(cb => cb.value);
+
+    const dia = document.getElementById("inputDia").value;
+    const horario = document.getElementById("inputHorario").value;
+
+    if (servicosSelecionados.length === 0 || !dia || !horario) {
+        alert("Preencha todos os campos.");
+        return;
+    }
+
+    // --- CORREÇÃO DO FORMATO DA DATA ---
+    const partes = dia.split("-");            // [ano, mes, dia]
+    const diaFormatado = `${partes[2]}/${partes[1]}/${partes[0]}`; // dd/mm/aaaa
+    // ------------------------------------
+
+    const mensagem = `Olá Vânia, gostaria de agendar um horário.
+Dia: ${diaFormatado}
+Horário: ${horario}
+Serviços: ${servicosSelecionados.join(", ")}`;
+
+    const numero = "5575981316315";
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+    window.location.href = url;
+};

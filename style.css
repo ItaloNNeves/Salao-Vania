@@ -26,8 +26,14 @@ header {
         width: 100%;
         max-width: 1172px;
         margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
         /* padding: 0 16px; */
     }
+}
+
+#btnMenu {
+    display: none;
 }
 
 .bnner-mob {
@@ -198,11 +204,23 @@ h2 {
     box-shadow: 0 3px 10px #4b4a4a34;
     border-radius: 22px;
 
-    img {
-        width: 100%;
+    .serv-img {
+        overflow: hidden;
         max-height: 245px;
         border-radius: 22px 22px 0 0;
+    }
+
+    img {
+        width: 100%;
+
+        max-height: 200px;
+        border-radius: 22px 22px 0 0;
         object-fit: cover;
+        transition: .3s ease;
+    }
+
+    img:hover {
+        scale: 1.10;
     }
 }
 
@@ -220,6 +238,10 @@ h2 {
     .serv-info {
         font-size: 12px;
         color: #89616f;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     .serv-price {
@@ -342,15 +364,82 @@ h2 {
     color: #89616f;
 }
 
+/* FAZER O AGENDAMENTO  */
+
+#agendamento {
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#agendamento label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+.servicos{
+    display: flex;
+    gap: 20px;
+    flex: 0 0 calc((100% - 60px) / 2 );
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
+}
+.servicos label {
+    display: block;
+    margin: 5px 0;
+}
+.inpt-inf-serv{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+    div{
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 calc(50% - 20px);
+    }
+   #inputDia , #inputHorario{
+        width: 100%;
+    /* height: 30px; */
+    padding: 10px;
+    border-radius: 22px;
+    outline: none;
+    border: 1px solid #E83C91;
+    }
+    
+}
+
+#btnConfirmar {
+    padding: 15px 20px;
+    background: #E83C91;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    margin: 40px auto 0;
+}
+
+
 /* LOCALIZAÇAO */
 .localiza-end {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
 iframe {
     width: 70%;
     border-radius: 16px;
+    margin: 0 auto;
 
 }
 
@@ -358,7 +447,7 @@ iframe {
 
 footer {
     text-align: center;
-    background-color: rgb(243, 238, 238);
+    background-color: rgb(255, 255, 255);
     min-width: 100%;
     padding: 40px;
 
@@ -419,7 +508,8 @@ footer {
         /* display: none; */
         flex-direction: column;
     }
-    .agen-cab{
+
+    .agen-cab {
         margin-bottom: 20px;
         font-size: 14px;
         text-align: center;
@@ -449,7 +539,8 @@ footer {
         display: none;
     }
 
-    .bnner-mob {
+    .bnner-mob,
+    #btnMenu {
         display: initial;
     }
 
@@ -503,24 +594,9 @@ footer {
             object-fit: cover;
             border-radius: 16px 16px 0 0;
         }
+
     }
 
-    /* SOBRE MIM  */
-
-    .sobre-mim article {
-        flex-direction: column;
-
-        figure {
-            width: 100%;
-            max-width: 200px;
-        }
-
-        div {
-            /* text-align: center; */
-            align-items: center;
-
-        }
-    }
 
     /* AVALIAÇOES */
 
@@ -547,12 +623,33 @@ footer {
 
     /* FOOTER  */
 
-    footer{
+    footer {
         flex-direction: column;
         display: flex;
         gap: 10px;
     }
-    .icon-insta{
+
+    .icon-insta {
         font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    /* SOBRE MIM  */
+
+    .sobre-mim article {
+        flex-direction: column;
+
+        figure {
+            width: 100%;
+            max-width: 200px;
+        }
+
+        div {
+            /* text-align: center; */
+            align-items: center;
+
+        }
     }
 }
