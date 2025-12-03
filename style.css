@@ -200,8 +200,9 @@ h2 {
 
     img {
         width: 100%;
-        max-height: 300px;
+        max-height: 245px;
         border-radius: 22px 22px 0 0;
+        object-fit: cover;
     }
 }
 
@@ -497,7 +498,8 @@ footer {
         img {
             width: 100%;
             /* max-width: 800px; */
-            max-height: 380px;
+            aspect-ratio: 1 /1;
+            max-height: 230px;
             object-fit: cover;
             border-radius: 16px 16px 0 0;
         }
