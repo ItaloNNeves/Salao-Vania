@@ -366,67 +366,113 @@ h2 {
 
 /* FAZER O AGENDAMENTO  */
 
+/* --- SEU CSS ORIGINAL --- */
 #agendamento {
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-#agendamento label {
-    display: block;
-    margin-top: 15px;
-    font-weight: 600;
+#agendamento > label {
+  margin-top: 15px;
+  font-weight: 600;
+  display: block;
 }
-.servicos{
-    display: flex;
-    gap: 20px;
-    flex: 0 0 calc((100% - 60px) / 2 );
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 10px;
+
+.servicos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px 0;
+  justify-content: center;
 }
-.servicos label {
-    display: block;
-    margin: 5px 0;
+
+.servico-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f5f5f7;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  flex: 0 0 calc(50% - 20px);
+  justify-content: space-between;
 }
-.inpt-inf-serv{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    
-    div{
-        display: flex;
-        flex-direction: column;
-        flex: 0 0 calc(50% - 20px);
-    }
-   #inputDia , #inputHorario{
-        width: 100%;
-    /* height: 30px; */
-    padding: 10px;
-    border-radius: 22px;
-    outline: none;
-    border: 1px solid #E83C91;
-    }
-    
+
+/* Inputs de dia e horário */
+.inpt-inf-serv {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.inpt-inf-serv div {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(50% - 20px);
+}
+
+#inputDia,
+#inputHorario {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid #EB3C91;
 }
 
 #btnConfirmar {
-    padding: 15px 20px;
-    background: #E83C91;
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    margin: 40px auto 0;
+  padding: 15px 20px;
+  background: #EB3C91;
+  border: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 80%;
+  margin: 40px auto 0 auto;
+  display: block;
 }
+
+
+
+/* --- CSS DO CHECKBOX ANIMADO (IMPORTANTE) --- */
+.container {
+  cursor: pointer;
+}
+
+.container input {
+  display: none;
+}
+
+.container svg {
+  overflow: visible;
+  width: 32px;
+  height: 32px;
+}
+
+.path {
+  fill: none;
+  stroke: #EB3C91;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+  stroke-dasharray: 241 9999999;
+  stroke-dashoffset: 0;
+}
+
+.container input:checked ~ svg .path {
+  stroke: #36b54a;
+  stroke-dasharray: 70.50 9999999;
+  stroke-dashoffset: -262.27;
+}
+
 
 
 /* LOCALIZAÇAO */
@@ -470,6 +516,69 @@ footer {
 
 @media screen and (max-width: 897px) {
 
+   .burger {
+    position: relative;
+    width: 30px;        
+    height: 30px;       
+    cursor: pointer;
+    display: block;
+}
+
+
+.burger input {
+    display: none;
+}
+
+
+.burger span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;         
+    background: black;
+    border-radius: 9px;
+    left: 0;
+    transition: .25s ease-in-out;
+}
+
+/* barra 1 */
+.burger span:nth-of-type(1) {
+    top: 4px;                  
+    transform-origin: center;  
+}
+
+/* barra 2 */
+.burger span:nth-of-type(2) {
+    top: 50%;                  
+    transform: translateY(-50%);
+    transform-origin: center;
+}
+
+/* barra 3 */
+.burger span:nth-of-type(3) {
+    bottom: 4px;              
+    transform-origin: center;
+}
+
+/* animação — vira X */
+.burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 50%;
+    transform-origin: center;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    bottom: auto;
+    top: 50%;
+    transform-origin: center;
+}
+
+
     /* Oculta o menu no mobile */
     #navBar {
         position: absolute;
@@ -484,11 +593,11 @@ footer {
         gap: 0;
         transform: translateY(-10px);
         transition: max-height .35s ease, opacity .25s ease, transform .25s ease;
-        z-index: 9999;
-        /* IMPORTANTE */
+        z-index: 9;
+       
     }
 
-    /* ITENS INTERNOS (correção aqui!) */
+    
     #navBar .bar-ul {
         display: flex;
         flex-direction: column;

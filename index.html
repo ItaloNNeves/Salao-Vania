@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/svg+xml" href="./imagens/Logo-va4.svg">
 </head>
 
 <body>
+
     <header>
         <nav>
             <figure>
@@ -24,20 +26,15 @@
                     <li class="bar-li"><a href="#sobre">Sobre mim</a></li>
                     <li class="bar-li"><a href="#local">Localização</a></li>
                 </ul>
-                <a 
-                    href="#agendamento"
-                    class="agen-cab" id="#"><i class="fa-brands fa-whatsapp"></i>Agende Agora</a>
+                <a href="#agendamento" class="agen-cab" id="#"><i class="fa-brands fa-whatsapp"></i>Agende Agora</a>
             </div>
             <div id="btnMenu" role="button">
-                <svg class="ham-menu" width="25px" height="64px" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                    <g id="SVGRepo_iconCarrier">
-                        <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round"></path>
-                    </g>
-                </svg>
+                <label class="burger" for="burger">
+                    <input type="checkbox" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
             </div>
         </nav>
     </header>
@@ -48,9 +45,7 @@
             <div class="content-banner">
                 <h1>Realce sua beleza com o toque único de Vânia Aquino.</h1>
                 <p>Descubra o poder de um cabelo bem cuidado e eleve sua autoestima.</p>
-                <a 
-                    href="#agendamento"
-                    id="agenda">Agendar Atendimento</a>
+                <a href="#agendamento" id="agenda">Agendar Atendimento</a>
             </div>
         </section>
         <section class="nossos-srev" id="serviços">
@@ -213,13 +208,94 @@
             <h2>Agende seu horário</h2>
 
             <label>Selecione os serviços:</label>
+
             <div class="servicos">
-                <label><input type="checkbox" value="Corte Feminino"> Corte Feminino</label>
-                <label><input type="checkbox" value="Escova"> Escova</label>
-                <label><input type="checkbox" value="Hidratação"> Hidratação</label>
-                <label><input type="checkbox" value="Coloração"> Coloração</label>
-                <label><input type="checkbox" value="Reconstrução"> Reconstrução</label>
-                <label><input type="checkbox" value="Botox Capilar"> Botox Capilar</label>
+
+                <!-- Modelo de item -->
+                <label class="servico-item">
+                    <span>Corte Feminino</span>
+
+                    <label class="container">
+                        <input type="checkbox" value="Corte Feminino">
+                        <svg viewBox="0 0 64 64" height="2em" width="2em">
+                            <path
+                                d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                                pathLength="575.0541381835938" class="path">
+                            </path>
+                        </svg>
+                    </label>
+                </label>
+
+                <label class="servico-item">
+                    <span>Escova</span>
+
+                    <label class="container">
+                        <input type="checkbox" value="Escova">
+                        <svg viewBox="0 0 64 64" height="2em" width="2em">
+                            <path
+                                d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                                pathLength="575.0541381835938" class="path">
+                            </path>
+                        </svg>
+                    </label>
+                </label>
+
+                <label class="servico-item">
+                    <span>Hidratação</span>
+
+                    <label class="container">
+                        <input type="checkbox" value="Hidratação">
+                        <svg viewBox="0 0 64 64" height="2em" width="2em">
+                            <path
+                                d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                                pathLength="575.0541381835938" class="path">
+                            </path>
+                        </svg>
+                    </label>
+                </label>
+
+                <label class="servico-item">
+                    <span>Coloração</span>
+
+                    <label class="container">
+                        <input type="checkbox" value="Coloração">
+                        <svg viewBox="0 0 64 64" height="2em" width="2em">
+                            <path
+                                d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                                pathLength="575.0541381835938" class="path">
+                            </path>
+                        </svg>
+                    </label>
+                </label>
+
+                <label class="servico-item">
+                    <span>Reconstrução</span>
+
+                    <label class="container">
+                        <input type="checkbox" value="Reconstrução">
+                        <svg viewBox="0 0 64 64" height="2em" width="2em">
+                            <path
+                                d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                                pathLength="575.0541381835938" class="path">
+                            </path>
+                        </svg>
+                    </label>
+                </label>
+
+                <label class="servico-item">
+                    <span>Botox Capilar</span>
+
+                    <label class="container">
+                        <input type="checkbox" value="Botox Capilar">
+                        <svg viewBox="0 0 64 64" height="2em" width="2em">
+                            <path
+                                d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                                pathLength="575.0541381835938" class="path">
+                            </path>
+                        </svg>
+                    </label>
+                </label>
+
             </div>
 
             <div class="inpt-inf-serv">
@@ -232,10 +308,11 @@
                     <label>Horário:</label>
                     <input type="time" id="inputHorario">
                 </div>
-
             </div>
+
             <button id="btnConfirmar">Confirmar Agendamento</button>
         </section>
+
 
         <section class="localiza-end">
             <h2>Localização</h2>
