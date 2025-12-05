@@ -655,7 +655,7 @@ footer {
 
     .banner-principal {
         width: 100%;
-        padding: 0 0 20px;
+        padding: 0 ;
         overflow: hidden;
 
         img {
@@ -725,7 +725,7 @@ footer {
     }
 
     iframe {
-        width: 70%;
+        width: 90%;
         max-height: 300px;
         /* aspect-ratio: 1/1; */
     }
