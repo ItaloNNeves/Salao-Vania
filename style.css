@@ -745,15 +745,18 @@ footer {
 
 @media screen and (max-width: 575px) {
 
+    .card-serv article{  
+        width: calc(50% - 20px);    
         .serv-img {
         overflow: hidden;
         height: 150px;
         border-radius: 22px 22px 0 0;
 
-        img{
-            height: 100%;
-        }
     }
+    img{
+        height: 100%;
+    }
+}
     /* SOBRE MIM  */
 
     .sobre-mim article {
