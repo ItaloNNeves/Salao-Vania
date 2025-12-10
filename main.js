@@ -77,4 +77,12 @@ Serviços: ${servicosSelecionados.join(", ")}`;
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
 
     window.location.href = url;
+    
+      let bxt = document.getElementById('btnConfirmar')
+      bxt.innerText = 'carregando...'
+    
+    //   setTimeout(() => {
+    //     window.location.href = url;  // Redirecionando para o WhatsApp
+    // }, 10000);  // Tempo de espera para o "carregando..." aparecer
 };
+// LOADING 
